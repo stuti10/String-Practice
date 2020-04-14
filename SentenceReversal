@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+public class SentenceReversal {
+	
+	public static void main(String args[]) {
+		
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter a Sentence for Reversal:");
+		String input=in.nextLine();
+		input=reverse(input);
+		System.out.println("Reversed Sentence is:"+input);
+		
+	}
+
+	public static String reverse(String input) {
+		
+		if(input==null)
+			return input;
+		
+		String output="";
+		String words[]=input.split("\\s");
+		for(int i=words.length-1;i>=0;i--) 
+			output=output+words[i]+" ";
+		return output;
+		
+	}
+
+}
